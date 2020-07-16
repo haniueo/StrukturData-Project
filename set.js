@@ -23,36 +23,15 @@
     var context = { 'player1' : '🐱', 'player2' : '🐶' };
 
     var board = [];
-
-    
-
     var playerCatScore = 0;
-
     var playerDogScore = 0;
-
-    
-
     var turns;
 
-    var current_Context;
-
-    
-
-    
-
+    var current_Context;    
     var init = function() {
 
         turns = 0;
-
-        
-
-        
-
         current_Context = compute_Context();
-
-        
-
-    
 
         board[0] = new Array(3);
 
@@ -61,9 +40,6 @@
         board[2] = new Array(3);
 
         
-
-    
-
         for(var i = 0; i < boxes.length; i++) {
 
             boxes[i].addEventListener('click', clickHandler, false);
@@ -77,9 +53,6 @@
     }
 
     
-
-    
-
     var compute_Context = function() {
 
         return (turns % 2 == 0) ? context.player1 : context.player2;
